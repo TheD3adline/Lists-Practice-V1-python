@@ -26,5 +26,12 @@ wordsSet = (set(wordsList))
 for word in wordsList:
     print(word)
 
+print("\nStats: ")
+
+counter = 0
 for word in wordsSet:
-    print(word)
+    for wordCheck in wordsList:
+        if word == wordCheck:
+            counter += 1
+    print(word + " " + str(counter))
+    counter = 0
